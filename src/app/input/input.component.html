@@ -1,0 +1,5 @@
+<div class="container">
+    <label class="label" for="passwordInput">Ckeck your password`s strength: </label>
+    <input type="text" name="passwordInput" (input)="checkPassStrength($event)"  />
+<app-strength-zone  [passwordStrength]="passwordStrength">
+</app-strength-zone>

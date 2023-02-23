@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="strength-section" [ngClass]="{
+        'grey': !passwordStrength || passwordStrength == 'empty',
+        'red': passwordStrength === 'weak'  ||  passwordStrength === 'short' ||  passwordStrength === 'empty',
+        'yellow':passwordStrength === 'middle',
+        'green': passwordStrength === 'strong'}">
+       </div>
+     
+       <div class="strength-section" [ngClass]="{ 
+         'grey': !passwordStrength || passwordStrength === 'weak'|| passwordStrength == 'empty' , 
+         'red': passwordStrength === 'short' ||  passwordStrength === 'empty',
+         'yellow':passwordStrength === 'middle',
+         'green': passwordStrength === 'strong'}">
+       </div>
+     
+       <div class="strength-section" [ngClass]="{ 
+         'grey': !passwordStrength || passwordStrength === 'middle' || passwordStrength === 'weak'|| passwordStrength == 'empty' , 
+         'red': passwordStrength === 'short' ||  passwordStrength === 'empty' ,
+         'green': passwordStrength === 'strong'}">
+       </div>
+</div>
